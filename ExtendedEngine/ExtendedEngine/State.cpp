@@ -18,8 +18,10 @@ namespace extspehs
 	}
 	VisualState::~VisualState()
 	{
-		delete batchManager;
-		delete camera;
+		if (batchManager)
+			delete batchManager;
+		if (camera)
+			delete camera;
 	}
 
 	void VisualState::render()
