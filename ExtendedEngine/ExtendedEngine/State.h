@@ -21,11 +21,11 @@ namespace extspehs
 	{
 	public:
 		VisualState();
-		virtual ~VisualState();
+		~VisualState() override;
 
-		virtual void init();
-		virtual bool update() = 0;
-		virtual void render();
+		void init() override;
+		bool update() override = 0;
+		void render() override;
 
 	protected:
 		spehs::Camera2D* camera;
