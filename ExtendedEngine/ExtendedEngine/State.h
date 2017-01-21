@@ -27,6 +27,8 @@ namespace extspehs
 		bool update() override = 0;
 		void render() override;
 
+		const spehs::Camera2D& getCamera() const { return *camera; }
+
 	protected:
 		spehs::Camera2D* camera;
 		spehs::BatchManager* batchManager;
